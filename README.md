@@ -1,3 +1,16 @@
+## About
+1. A sample ReactJs project to show login and signup feature using different authentication type like(Gmail,Facebook and through simple forms).
+2. In this project user can login using Gmail or Facebook or simply they can register themselves by filling up the form.
+## Steps to run 
+1. Nodejs and React js should be installed on your system
+2. After installing both, Just clone this repostiory
+3. In your local machine ,Run npm install or Yarn to install all the packages/dependencies
+given in package.json.
+4. Now, Just run npm start to run on your machine.
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
