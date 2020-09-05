@@ -8,7 +8,11 @@
 given in package.json.
 4. Now, Just run npm start to run on your machine.
 
-
+## Test Users for facebook login
+1. email:nlbggucpbe_1599308278@tfbnw.net
+    password:Test123!@#
+2. email:open_wwgcfsh_user@tfbnw.net
+    password:Test123!@#
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
