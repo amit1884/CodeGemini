@@ -13,13 +13,12 @@ function FacebookSignIn() {
         <div>
             {/* <span><img src={logo} alt="facebook login" className="logo"/></span>&nbsp;&nbsp; */}
             <FacebookLogin cssClass="social-login-btn"
-                appId="1088597931155576"
+                appId="756227315165339"
                 autoLoad={true}
                 fields="name,email,picture"
                 onClick={componentClicked}
                 callback={responseFacebook} 
                 textButton="Sign up with Facebook"
-                icon="<i className='fa fa-user'></i>"
             />
         </div>
     )

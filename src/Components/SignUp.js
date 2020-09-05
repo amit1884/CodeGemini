@@ -23,6 +23,8 @@ function SignUp() {
             if(result.data)
             {
                 localStorage.setItem("token",result.data.token)
+                const name=First+' '+Last;
+                localStorage.setItem("user",name)
                 history.push('/')
             }
             else{
