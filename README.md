@@ -1,5 +1,5 @@
 ## About
-1. A sample ReactJs project to show login and signup feature using different authentication type like(Gmail,Facebook and through simple forms).
+1. A simple ReactJs project to show login and signup feature using different authentication type like(Gmail,Facebook and through simple forms).
 2. In this project user can login using Gmail or Facebook or simply they can register themselves by filling up the form.
 ## Steps to run 
 1. Nodejs and React js should be installed on your system
