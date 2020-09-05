@@ -5,19 +5,18 @@ import GoogleLogin from 'react-google-login';
 import {useHistory} from 'react-router-dom'
  function GoogleSignIn() {
      const history=useHistory()
+
+     // Function to Perform Gmail login
+     
     const responseGoogle = (response) => {
         console.log(response);
         console.log(response.profileObj.name)
-        localStorage.setItem("token",response.tokenId)
-        localStorage.setItem("user",response.profileObj.name)
-        history.push('/')
+        localStorage.setItem("token",response.tokenId) //Storing th unique token in local storage 
+        localStorage.setItem("user",response.profileObj.name) //Storing the user name 
+        history.push('/')      //after getting response/successfull login redirecting the user to home page 
       }
     return (
         <div>
-            {/* <button className="social-login-btn">
-                <span><img src={logo} alt="google"/></span>&nbsp;&nbsp;
-                <span>Sign up with Google</span>
-            </button> */}
             <GoogleLogin
                 clientId="91775337818-s054nauico708jd7gbltsdm0t8eivsi2.apps.googleusercontent.com"
                 buttonText="Sign up with Google"

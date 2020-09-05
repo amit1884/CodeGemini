@@ -3,16 +3,22 @@ import img from '../assets/images/company.png'
 import { useHistory, Redirect} from 'react-router-dom'
 function Home() {
 
-  const [isLoggedIn,setIsLoggedIn]=useState(false)
-  const [user,setUser]=useState('')
+  const [isLoggedIn,setIsLoggedIn]=useState(false)   //Variable to Check if any user is logged in or not
+  const [user,setUser]=useState('')   //variable to store the user data
   const history=useHistory()
+
+  //this useeffect runs when login status changes
+
   useEffect(()=>{
-    if(localStorage.getItem("token"))
+    if(localStorage.getItem("token"))   //Checking wheather any token is present in local storage or not
     {
-      setIsLoggedIn(true)
-      setUser(localStorage.getItem("user"))
+      setIsLoggedIn(true)  // if true setting login status true
+      setUser(localStorage.getItem("user"))  //storing the user data
     }
   },[isLoggedIn])
+
+  //Checking the login status if true stay on home page else redirect to signup page
+  //this useeffect will run only once when component first mount
   useEffect(()=>{
 
     if(localStorage.getItem("token"))
@@ -25,11 +31,13 @@ function Home() {
 
   },[])
 
+  //Perform logout functionality
+
   const logoutHandle=()=>{
 
-    localStorage.removeItem("token")
+    localStorage.removeItem("token")  //removing the token and user from local storage
     localStorage.removeItem("user")
-    setIsLoggedIn(false)
+    setIsLoggedIn(false)  // setting the login status false
     history.push('/signup')
   }
   return (
@@ -39,6 +47,7 @@ function Home() {
         <div style={{display:"flex",justifyContent:"center"}}>
         <img src ={img} alt="company"/>
         </div>
+        {/* logout button */}
         <div className="text-center">
         <button className="btn btn-warning" onClick={logoutHandle}>Logout</button>
         </div>

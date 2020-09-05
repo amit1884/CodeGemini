@@ -5,15 +5,22 @@ import FacebookSignIn from './FacebookSignIn';
 import {useHistory} from 'react-router-dom'
 import axios from 'axios'
 function SignUp() {
+
+    //Variable to store the form data.
     const [First,setFirst]=useState('')
     const [Last,setLast]=useState('')
     const [Email,setEmail]=useState('')
     const [Password,setPassword]=useState('')
+
     const history =useHistory()
+    //Function to handle form submit action.
+
     const SubmitHandler=(e)=>{
 
-        e.preventDefault();
-        console.log("Email",Email,"Password",Password)
+        e.preventDefault(); //preventing the browser to reload
+
+        // console.log("Email",Email,"Password",Password)
+        // Executing a post request to the api by passing the email and password using axios
         axios.post("https://reqres.in/api/register",{
             email:Email,
             password:Password
@@ -22,10 +29,10 @@ function SignUp() {
             console.log(result)
             if(result.data)
             {
-                localStorage.setItem("token",result.data.token)
+                localStorage.setItem("token",result.data.token) //storing the token in local storage
                 const name=First+' '+Last;
-                localStorage.setItem("user",name)
-                history.push('/')
+                localStorage.setItem("user",name)   //storing the name in local storage
+                history.push('/')    //After successfull signup redirecting to home page.
             }
             else{
                 console.log("error ocurred")
@@ -45,15 +52,16 @@ function SignUp() {
                     <div className="container-fluid">
                         <div className="row ">
                             <div className="col-md-6 col-sm-12">
-                                <GoogleSignIn/>
+                                <GoogleSignIn/>  {/*google login button */}
                             </div>
                             <div className="col-md-6 col-sm-12">
-                                <FacebookSignIn/>
+                                <FacebookSignIn/>    {/*facebook login button */}
                             </div>
                         </div>
                         <p className="text-center">or</p>
                         <div className="row">
-                            <div className="col-sm-12">
+                            <div className="col-sm-12"> 
+                            {/* Form for registering the user */}
                                 <form onSubmit={SubmitHandler}>
                                 <div className="form-group">
                                 <input onChange={(e)=>setFirst(e.target.value)} value={First}type="text" name="first" placeholder="First Name" className="form-control"/>
