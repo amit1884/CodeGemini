@@ -22,7 +22,7 @@ function FacebookSignIn() {
                 fields="name,email,picture"
                 onClick={componentClicked}
                 callback={responseFacebook} 
-                textButton="    Sign up with Facebook"
+                textButton="   Sign up with Facebook"
                 icon={<i className="fa fa-facebook"style={{color:"dodgerblue"}}></i>}
             />
         </>
