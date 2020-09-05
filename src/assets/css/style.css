@@ -12,9 +12,14 @@ padding-right:25px;
     border:none;
     box-shadow: 1px 1px 5px lightgray;
     border-radius:5px;
-    outline:none;
+    outline:#ffff;
+    margin-top:10px;
 }
 .social-login-btn img{
+    width:25px;
+    height:25px;
+}
+.logo{
     width:25px;
     height:25px;
 }
