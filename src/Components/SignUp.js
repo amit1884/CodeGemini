@@ -42,8 +42,8 @@ function SignUp() {
                     <p className="text-center">Sign Up</p>
                     <h3 className="text-center">Create your account</h3>
                     <p className="text-center">Lorem Ipsum dofor sit amet,</p>
-                    <div className="container">
-                        <div className="row text-center">
+                    <div className="container-fluid">
+                        <div className="row ">
                             <div className="col-md-6 col-sm-12">
                                 <GoogleSignIn/>
                             </div>

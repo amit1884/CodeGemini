@@ -35,7 +35,7 @@ function Home() {
   return (
     <div className="App" style={{marginTop:"40px"}}>
         <h2 className="text-center">LogIn Successfull !</h2>
-  <h3 className="text-center">Welcome <span style={{color:"dodgerblue"}}>{user}</span> ,to our Home Page !!!</h3>
+        <h3 className="text-center">Welcome <span style={{color:"dodgerblue"}}>{user}</span> ,to our Home Page !!!</h3>
         <div style={{display:"flex",justifyContent:"center"}}>
         <img src ={img} alt="company"/>
         </div>

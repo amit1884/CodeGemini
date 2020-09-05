@@ -1,5 +1,5 @@
 import React from 'react'
-import brand from './assets/images/brand.png'
+import brand from './assets/images/caplogo.png'
 import './assets/css/style.css'
 function Header() {
     return (
@@ -8,10 +8,10 @@ function Header() {
             display:"flex",
             justifyContent:"center",
             boxShadow:"1px 1px 15px lightgray",
-            padding:"15px"
+            padding:"10px"
         }}>
             <img src ={brand} alt="brand" style={{
-                width:"200px"
+                width:"350px",height:"90px"
             }}/>
         </div>
     )
